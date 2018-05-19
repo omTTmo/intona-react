@@ -1,0 +1,785 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"backg",
+				"background-repeat"
+			],
+			[
+				"welo",
+				"welcomeButton"
+			],
+			[
+				"getU",
+				"getUserInput"
+			],
+			[
+				"resize",
+				"resizeCanvas"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"curr",
+				"currPitch"
+			],
+			[
+				"resi",
+				"resizeCanvas"
+			],
+			[
+				"height",
+				"HEIGHT"
+			],
+			[
+				"he",
+				"HEIGHT"
+			],
+			[
+				"dra",
+				"drawLine"
+			],
+			[
+				"Height",
+				"HEIGHT"
+			],
+			[
+				"clo",
+				"closePath"
+			],
+			[
+				"clear",
+				"clearRect"
+			],
+			[
+				"half",
+				"halfWidth"
+			],
+			[
+				"slice",
+				"sliceWidth"
+			],
+			[
+				"Analy",
+				"ANALYSIS_BUF_SIZE"
+			],
+			[
+				"roun",
+				"roundCurrPitch"
+			],
+			[
+				"ty",
+				"typeof"
+			],
+			[
+				"set",
+				"setupAudioContext"
+			],
+			[
+				"update",
+				"updatePlay"
+			],
+			[
+				"audio",
+				"audioCtx"
+			],
+			[
+				"bin",
+				"bindEvents"
+			],
+			[
+				"fun",
+				"fun\tFunction"
+			],
+			[
+				"y",
+				"yStep"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"wp_",
+				"wp_enqueue_script"
+			],
+			[
+				"item",
+				"item_id"
+			],
+			[
+				"ite",
+				"item_data"
+			],
+			[
+				"contac",
+				"contactData"
+			],
+			[
+				"con",
+				"contactData"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"pric",
+				"price_html"
+			],
+			[
+				"cat",
+				"categories"
+			],
+			[
+				"init",
+				"initCarouselFlex"
+			],
+			[
+				"woo",
+				"woocommerce-product-gallery__image"
+			],
+			[
+				"woocom",
+				"woocommerce-product-gallery__wrapper"
+			],
+			[
+				"Arb",
+				"Arbeitszeiten_"
+			],
+			[
+				"cs",
+				"css\t.css() - multiple"
+			],
+			[
+				"clos",
+				"closest\t.closest()"
+			],
+			[
+				"close",
+				"closest\t.closest()"
+			],
+			[
+				"stop",
+				"stopPropagation"
+			],
+			[
+				"tog",
+				"toggle\t.toggle()"
+			],
+			[
+				"css",
+				"css\t.css() - single"
+			],
+			[
+				"add",
+				"addClass\t.addClass()"
+			],
+			[
+				"contain",
+				"container"
+			],
+			[
+				"remov",
+				"removeClass\t.removeClass()"
+			],
+			[
+				"prev",
+				"preventDefault"
+			],
+			[
+				"save",
+				"saveFolder"
+			],
+			[
+				"inn",
+				"innerHTML"
+			],
+			[
+				"bro",
+				"browseFolder"
+			],
+			[
+				"sele",
+				"select-demo"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"text-t",
+				"text-transform"
+			],
+			[
+				"new",
+				"newFileName"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 1590,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/utility.js",
+			"settings":
+			{
+				"buffer_size": 5175,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.js",
+			"settings":
+			{
+				"buffer_size": 254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/App.css",
+			"settings":
+			{
+				"buffer_size": 9946,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 29.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/danieltofaute/Desktop/WebProjekte/intona-react",
+		"/Users/danieltofaute/Desktop/WebProjekte/intona-react/src"
+	],
+	"file_history":
+	[
+		"/Users/danieltofaute/Desktop/WebProjekte/intona-react/src/App.js",
+		"/Users/danieltofaute/Desktop/WebProjekte/intona-react/src/index.css",
+		"/Users/danieltofaute/Desktop/WebProjekte/intona-react/package.json",
+		"/Users/danieltofaute/Desktop/WebProjekte/Müller David/Website /TODO.txt",
+		"/Users/danieltofaute/Desktop/master.txt",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/footer.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/project-slide.js",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/archive.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/single.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/page.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/index.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/header.php",
+		"/Applications/MAMP/htdocs/intona-master/.gitignore",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/style.css",
+		"/Applications/MAMP/htdocs/intona-lib/js/pitchfinder.js",
+		"/Users/danieltofaute/Downloads/example.py",
+		"/Applications/MAMP/htdocs/intona-master/js/main.js",
+		"/Applications/MAMP/htdocs/intona-master/js/intona.js",
+		"/Applications/MAMP/htdocs/intona-master/index.html",
+		"/Applications/MAMP/htdocs/intona-master/js/functions.js",
+		"/Applications/MAMP/htdocs/lager/index.html",
+		"/Users/danieltofaute/Desktop/lager.sql",
+		"/Applications/MAMP/htdocs/lager/models/LagerRepo.php",
+		"/Applications/MAMP/htdocs/lager/db/config.php",
+		"/Applications/MAMP/htdocs/lager/models/Client.php",
+		"/Applications/MAMP/htdocs/lager/clients/index.php",
+		"/Applications/MAMP/htdocs/lager/items/index.php",
+		"/Applications/MAMP/htdocs/jsgrid-php-master/index.html",
+		"/Applications/MAMP/htdocs/Intona/js/main.js",
+		"/Users/danieltofaute/Desktop/Eyeworkers/TODO.txt",
+		"/Users/danieltofaute/bin/createfiles.command",
+		"/Users/danieltofaute/Desktop/wptest/docker-compose.yml",
+		"/Applications/MAMP/htdocs/php_challenge/index.html",
+		"/Applications/MAMP/htdocs/jsgrid-php-master/models/Client.php",
+		"/Applications/MAMP/htdocs/lager/countries/index.php",
+		"/Users/danieltofaute/Downloads/lager.sql",
+		"/Applications/MAMP/htdocs/lager/models/Lager.php",
+		"/Applications/MAMP/htdocs/lager/public/css/jsgrid-theme.min.css",
+		"/Applications/MAMP/htdocs/lager/public/css/jsgrid.min.css",
+		"/Applications/MAMP/htdocs/jsgrid-php-master/db/createdb.sql",
+		"/Applications/MAMP/htdocs/jsgrid-php-master/db/config.php",
+		"/Applications/MAMP/htdocs/jsgrid-php-master/countries/index.php",
+		"/Users/danieltofaute/Desktop/Projekte - Privat/GoL/index.html",
+		"/Users/danieltofaute/Desktop/Projekte - Privat/GoL/css/style.css",
+		"/Users/danieltofaute/Desktop/Projekte - Privat/GoL/js/main.js",
+		"/Users/danieltofaute/Desktop/gulo.js",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/functions 2.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/functions.php",
+		"/Users/danieltofaute/Dropbox/Forex/Trading_strat",
+		"/Users/danieltofaute/Desktop/Sicca/Arbeitszeiten-EXCEL/Excel Minusstunden Formel",
+		"/Applications/MAMP/htdocs/blubb/css/style.css",
+		"/Applications/MAMP/htdocs/blubb/js/main.js",
+		"/Applications/MAMP/htdocs/blubb/index.html",
+		"/Users/danieltofaute/Desktop/HfM/Master/Masterarbeit/Master",
+		"/Applications/MAMP/htdocs/test/css/style.css",
+		"/Applications/MAMP/htdocs/test/js/main.js",
+		"/Applications/MAMP/htdocs/test/index.html",
+		"/Users/danieltofaute/bin/index.html",
+		"/Users/danieltofaute/bin/js/main.js",
+		"/Users/danieltofaute/bin/css/style.css",
+		"/Applications/MAMP/htdocs/VonUndZu/todo.txt",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/archive-product.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/style 2.css",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/blog-styles.css",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/WooCommerceIntegrationFrontend.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/style 3.css",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/list.txt",
+		"/Applications/MAMP/htdocs/ms_wp/wp-content/themes/ms/loop.php",
+		"/Applications/MAMP/htdocs/ms_wp/wp-content/themes/ms/template-parts/content.php",
+		"/Applications/MAMP/htdocs/ms_wp/wp-config.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/wp-config.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/check_order.php",
+		"/Applications/MAMP/htdocs/lili/js/main.js",
+		"/Applications/MAMP/htdocs/lili/index.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/nr_108.html",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/nr_110.html",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/nr_100.html",
+		"/Applications/MAMP/htdocs/lili/ajax/template.html",
+		"/Applications/MAMP/htdocs/lili/js/youtube.js",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/script_testing_template.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-config.php",
+		"/Users/danieltofaute/Downloads/woc-order-alert/woocommerce-order-alert.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/tofu-custom-functions.php",
+		"/Applications/MAMP/logs/mysql_error_log.err",
+		"/Volumes/home/Instabot/example.py",
+		"/Users/danieltofaute/Desktop/plugin_stand_14_11_2017",
+		"/Users/danieltofaute/Desktop/Sicca/Multisite/plugin_stand_14_11_2017_updated",
+		"/Users/danieltofaute/Desktop/Sicca/Daten_Lagerliste",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/404.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/single-blog.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/single-product.js",
+		"/Applications/MAMP/htdocs/LagerPHP/warehouse-inventory-system/oswa_inv.sql",
+		"/Applications/MAMP/htdocs/LagerPHP/warehouse-inventory-system/includes/config.php",
+		"/Volumes/home/Instabot/src/instabot.py",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/style 4.css",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/.htaccess",
+		"/Users/danieltofaute/Desktop/Serverlog.txt",
+		"/Users/danieltofaute/Downloads/Footer.json",
+		"/Users/danieltofaute/Desktop/Sicca/Multisite/Divi_customization/Hacked Plugins etc./woocommercer-html5-video/WooCommerceIntegrationFrontend.php",
+		"/Users/danieltofaute/Desktop/WooCommerceIntegrationFrontend.php",
+		"/Users/danieltofaute/Desktop/woocommerce-dynamic-gallery-pro/admin/admin-pages/dynamic-gallery-page.php",
+		"/Users/danieltofaute/Desktop/woocommerce-dynamic-gallery-pro/admin/admin-interface.php",
+		"/Users/danieltofaute/Desktop/woocommerce-dynamic-gallery-pro/admin/settings/global-settings.php",
+		"/Users/danieltofaute/Desktop/woocommerce-dynamic-gallery-pro/admin/settings/gallery-style-settings.php",
+		"/Applications/MAMP/htdocs/reach/style.css",
+		"/Users/danieltofaute/Desktop/wp",
+		"/Users/danieltofaute/Desktop/blog-styles.css",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/functions 3.php",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/index.html",
+		"/Users/danieltofaute/Desktop/Projekte - Privat/Web/temp/test.html",
+		"/Users/danieltofaute/Desktop/Projekte - Privat/Web/temp/styles.css",
+		"/Users/danieltofaute/Desktop/Projekte - Privat/Web/test/index.html",
+		"/Users/danieltofaute/Desktop/Sicca/IT/vpn/VPN-disconnect.bat",
+		"/Users/danieltofaute/Desktop/Sicca/IT/vpn/VPN-mapping.bat",
+		"/Users/danieltofaute/Desktop/Sicca/IT/vpn/VPN-connect.bat",
+		"/Users/danieltofaute/Desktop/Sicca/IT/vpn/SG.vpn",
+		"/Users/danieltofaute/Downloads/startup_manuel.bat",
+		"/Volumes/Programme/KeyPass/DB - Administration/Administration.key",
+		"/Users/danieltofaute/Desktop/WebProjekte/Müller David/Logins",
+		"/private/var/folders/pg/h60kmw3904x4rzlqsn21dhqw0000gn/T/fz3temp-2/header 3.php",
+		"/Users/danieltofaute/Desktop/Apps/timez/www/js/index.js",
+		"/Volumes/web/timez/index.php",
+		"/Users/danieltofaute/Desktop/logfile.txt",
+		"/Volumes/Einkauf-und-Vertrieb/Dienstplan/timez/index.php",
+		"/Users/danieltofaute/Desktop/Projekte - Privat/VonUndZu/style.css",
+		"/Users/danieltofaute/Desktop/WebProjekte/Müller David/Website /staging/wp-content/themes/ms/js/project-slide.js",
+		"/Users/danieltofaute/Desktop/WebProjekte/Müller David/Website /ms_5_9_17/js/project-slide.js",
+		"/Users/danieltofaute/Desktop/Apps/jjoo/config.xml"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"init",
+			"istune",
+			"isplay",
+			"resizecanvas",
+			"isplay",
+			"#play",
+			"updateplay",
+			"isrunning",
+			"play",
+			".play",
+			"play",
+			"rotate",
+			"play",
+			"#play",
+			".play",
+			"play",
+			"font-famil",
+			"inner",
+			"lsub",
+			".css",
+			"hidden ",
+			".hidden ",
+			".hidden",
+			"font-size",
+			"body",
+			"sans-serif",
+			"button",
+			"welcome",
+			"tomenu",
+			"#note",
+			"log",
+			"HEIGHT/",
+			"updateinfo",
+			"update",
+			"holdpit",
+			"holdpitch",
+			"isrunning =",
+			"isrunning",
+			"micconsent",
+			"poly",
+			"tuna",
+			"constructenv",
+			"h =",
+			"offtune",
+			"letter-sp",
+			"ctx",
+			".log",
+			"log(",
+			"log",
+			"clear",
+			",HEIGHT/2",
+			"sidebar_wrapper",
+			"canvasCtx",
+			"round",
+			"roundcurr",
+			"currpitch",
+			"draw",
+			"var",
+			"pitch",
+			"function pitch",
+			"pitch",
+			"pitch(",
+			"currpi",
+			"pitch(",
+			"self",
+			"currpitch",
+			"resize",
+			"menu",
+			"fadeIn",
+			"fadeOut",
+			"getfloat",
+			"updatePlay",
+			"isrunning",
+			"closest",
+			"median",
+			"click",
+			"score",
+			"median",
+			"cent",
+			"f2",
+			"cent",
+			"ln2",
+			"centDiff",
+			"reference",
+			"referen",
+			"dict",
+			"getMp3",
+			"reference",
+			"playSound(",
+			"playSound",
+			"load"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/utility.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								639,
+								639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/index.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/App.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8978,
+								8978
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7684.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "intona-react.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
