@@ -1,4 +1,4 @@
-// eslint-disable-next-line 
+// eslint-disable-next-line
 import React, { Component } from 'react';
 import { fadeOutMenu } from './ui';
 
@@ -6,9 +6,9 @@ class Menu extends Component {
 	render() {
 		const options = ["tune", "practice"];
 		const buttons = options.map(butt => {
-			return(					
+			return(
 		        <div key={butt} className="welcomeButton" onClick={fadeOutMenu}>
-		        	<button className={butt+"gugi"}>{butt.toUpperCase}</button>
+		        	<button id={butt} className={butt + "gugi"}>{butt}</button>
 		        </div>
 				)
 		});
