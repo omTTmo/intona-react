@@ -359,12 +359,20 @@ div {
 }
 
 #cnv {
-  border-top:2px solid white;
-  border-bottom:2px solid white;
+  border:0.5em solid lightseagreen;
+  box-shadow:0px 10px 10em black;
+  border-radius: 2em;
+  animation-duration:.5s;
 }
 
-#toMenu{
-  flex-grow: 6;
+.back{
+  background: transparent;
+  color: white;
+  border:1px solid white;
+  text-align: center;
+  width:4em;
+  height:2em;
+  /*flex-grow: 6;*/
 }
 
 .inner{
@@ -400,6 +408,8 @@ div {
   display: flex;
   align-items:center;
   justify-content: center;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
 }
 
 .window{
@@ -476,29 +486,3 @@ button:hover, .playbar div.button:hover {
 .bottom {
   margin-top:15%;
 }
-/*----------------------------
-Bootstrap CSS stuff
-----------------------------*/
-.tooltip-inner {
-  background: white;
-  color:black;
-}
-.tooltip.bs-tooltip-right .arrow:before {
-  border-right-color:white !important;
-}
-/*#credits {
-  position: relative;
-  width: auto;
-  height:30px;
-  margin-top:2em;
-}
-
-#credits a img{
-  margin:auto;
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  max-height:100%;
-  max-width:100%;
-}*/
