@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { removeCanvas } from './ui';
-import Menu from './menu';
 
 class BackButton extends Component {
 		constructor(props) {
@@ -12,7 +11,9 @@ class BackButton extends Component {
   	handleClick(event) {
 		event.preventDefault();
 		this.setState({ name: 'bounceOut'});
-		document.getElementById('cnv').classList.add('animated','flipOutY');
+		var cnv = document.getElementById('cnv');
+		cnv.classList.add('animated','zoomOut');
+		cnv.classList.remove('zoomIn');
 
 		setTimeout(function(){
 			removeCanvas();
@@ -22,7 +23,7 @@ class BackButton extends Component {
 	render() {
 		return(
 			<div className={this.state.name + " back animated"}>
-				<div onClick={this.handleClick} className="btn">&larr;</div>
+				<div onClick={this.handleClick} className="btn gugi">BACK</div>
 			</div>
 		)
 	}

@@ -359,9 +359,8 @@ div {
 }
 
 #cnv {
-  border:0.5em solid lightseagreen;
-  box-shadow:0px 10px 10em black;
-  border-radius: 2em;
+  box-shadow:0px 0px 1em black;
+  border-radius: 0.3em;
   animation-duration:.5s;
 }
 
@@ -372,7 +371,7 @@ div {
   text-align: center;
   width:4em;
   height:2em;
-  /*flex-grow: 6;*/
+  letter-spacing:1em;
 }
 
 .inner{

@@ -12,7 +12,8 @@ class CanvasComp extends Component {
         super(props);
         this.state = {
           width:  window.innerWidth/2,
-          height: window.innerHeight*.75
+          height: window.innerHeight*.75,
+          isPlaying: true
         }
     }
 
@@ -38,11 +39,9 @@ class CanvasComp extends Component {
         const ctx = this.refs.canvas.getContext('2d');
         ctx.clearRect(0, 0, ctx.width, ctx.height);
         // draw children “components”
-        for (var i = 0; i < 20; i++) {
+        for (var i = 0; i < this.state.width; i++) {
             rect({ctx, x: i*60, y: this.refs.canvas.height/2 , width:20, height:20});
         }
-        // rect({ctx, x: 10, y: 10, width: 50, height: 50});
-        // rect({ctx, x: 110, y: 110, width: 50, height: 50});
     }
 
     render() {
