@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
-import { removeCanvas } from './ui';
+import { fadeOutVMenu } from './ui';
+import { BackIcon } from './icon';
 
 class BackButton extends Component {
 		constructor(props) {
     	super(props);
-    	this.state = { name: "inactive" };
+    	this.state = { clicked: false };
     	this.handleClick = this.handleClick.bind(this);
   	}
 
   	handleClick(event) {
 		event.preventDefault();
-		this.setState({ name: 'bounceOut'});
-		var cnv = document.getElementById('cnv');
-		cnv.classList.add('animated','zoomOut');
-		cnv.classList.remove('zoomIn');
-
-		setTimeout(function(){
-			removeCanvas();
-		},400);
+		this.setState({ clicked: true});
+		fadeOutVMenu();
 	}
 
 	render() {
+		var className = this.state.clicked ? 'bounceOut' :'zoomIn';
 		return(
-			<div className={this.state.name + " back animated"}>
-				<div onClick={this.handleClick} className="btn gugi">BACK</div>
+			<div className={className + " back animated"}>
+				<div onClick={this.handleClick} className="btn gugi">
+					<BackIcon />
+				</div>
 			</div>
 		)
 	}

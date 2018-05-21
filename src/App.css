@@ -359,18 +359,15 @@ div {
 }
 
 #cnv {
-  box-shadow:0px 0px 1em black;
+  float:left;
   border-radius: 0.3em;
   animation-duration:.5s;
 }
 
 .back{
+  float:left;
   background: transparent;
-  color: white;
-  border:1px solid white;
   text-align: center;
-  width:4em;
-  height:2em;
   letter-spacing:1em;
 }
 
@@ -484,4 +481,40 @@ button:hover, .playbar div.button:hover {
 
 .bottom {
   margin-top:15%;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px .2em black;
+}
+#vmenu {
+  float:left;
+  height:100%;
+  list-style-type: none;
+  flex-direction: column;
+
+}
+
+.vmenu-wrap {
+  margin:0;
+  padding:0 .2em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.vmenu-item {
+  cursor: pointer;
+  color:white;
+  letter-spacing: .1em;
+  background: transparent;
+  list-style: none;
+  flex-grow:1;
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 0.2em;
+  text-decoration: none;
+  width: 6em;
 }

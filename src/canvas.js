@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BackButton from './backButton';
+import VerticalMenu from './vertMenu';
 // “reusable component”
 function rect(props) {
     const {ctx, x, y, width, height} = props;
@@ -12,7 +12,7 @@ class CanvasComp extends Component {
         super(props);
         this.state = {
           width:  window.innerWidth/2,
-          height: window.innerHeight*.75,
+          height: window.innerHeight*.7,
           isPlaying: true
         }
     }
@@ -47,8 +47,8 @@ class CanvasComp extends Component {
     render() {
          return (
             <React.Fragment>
-            <BackButton />
-            <canvas id="cnv" className="animated zoomIn" ref="canvas" width={this.state.width} height={this.state.height}/>
+            <VerticalMenu />
+            <canvas id="cnv" className="animated zoomIn box-shadow" ref="canvas" width={this.state.width} height={this.state.height}/>
             </React.Fragment>
          );
     }

@@ -11,3 +11,12 @@ export function createCanvas() {
 export function removeCanvas() {
 	ReactDOM.render(<Menu  />, document.getElementById('root'));
 }
+
+export function fadeOutVMenu() {
+	var cnv = document.getElementById('cnv');
+	cnv.classList.remove('zoomIn');
+	cnv.classList.add('animated','zoomOut');
+	setTimeout(function(){
+		removeCanvas();
+	},400);
+}
