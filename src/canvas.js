@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 import VerticalMenu from './vertMenu';
-// “reusable component”
+import { getWav, playSound } from './tools';
+import audioContext from './audiocontext';
+var getUserMedia = require('getusermedia');
+
+
+
+
+getUserMedia({video: false, audio: true}, function (err, stream) {
+    if (err) {
+       console.log('Failed receiving stream from microphone');
+    } else {
+       console.log('Got audio stream!', stream);
+       console.log(audioContext);
+    }
+});
+
+// “reusable rect component”
 function rect(props) {
     const {ctx, x, y, width, height} = props;
     ctx.fillStyle = 'pink';
@@ -18,9 +34,12 @@ class CanvasComp extends Component {
     }
 
     componentDidMount() {
+        const canvas = this.refs.canvas;
+        const ctx = canvas.getContext('2d');
         this.updateCanvas();
         this.resizeCanvas();
         window.addEventListener("resize", this.resizeCanvas.bind(this));
+
     }
 
     componentDidUpdate() {
@@ -32,11 +51,13 @@ class CanvasComp extends Component {
     }
 
     resizeCanvas() {
+        console.log('resized')
           this.setState({ width: window.innerWidth/2, height: window.innerHeight*.65 });
     }
 
     updateCanvas() {
-        const ctx = this.refs.canvas.getContext('2d');
+        const canvas = this.refs.canvas;
+        var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, ctx.width, ctx.height);
         // draw children “components”
         for (var i = 0; i < this.state.width; i++) {

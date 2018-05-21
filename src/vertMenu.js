@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BackButton  from './backButton';
-import { fadeOutVMenu } from './ui';
 
 class VerticalMenu extends Component {
 	constructor(props){
@@ -12,13 +11,11 @@ class VerticalMenu extends Component {
 	handleClick(event) {
 		event.preventDefault();
 		this.setState({ active: true });
-		fadeOutVMenu();
 	}
 
 	render() {
 		const items = ['Choose Instrument','More Options','volume'];
 		const names = "vmenu-item box-shadow";
-		var className = this.state.active ? 'fadeOutDownBig' :'fadeInLeft';
 
 		const listItems = items.map((item, index) => {
 			return(
@@ -26,6 +23,7 @@ class VerticalMenu extends Component {
 			)
 		});
 
+		var className = this.state.active ? 'choose' :'fadeInLeft';
 
 		return(
 			<div id="vmenu" className={className + ' back animated'}>
