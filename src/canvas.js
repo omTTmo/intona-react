@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import VerticalMenu from './vertMenu';
-import { getWav, playSound } from './tools';
-import audioContext from './audiocontext';
+import VerticalMenu from './menu/vertMenu';
+import { getWav, playSound } from './audio-rel/tools';
+import audioContext from './audio-rel/audiocontext';
 var getUserMedia = require('getusermedia');
-
-
-
 
 getUserMedia({video: false, audio: true}, function (err, stream) {
     if (err) {
        console.log('Failed receiving stream from microphone');
     } else {
-       console.log('Got audio stream!', stream);
-       console.log(audioContext);
+       console.log('Got audio stream!');
+       console.log('Got Audio!', audioContext);
     }
 });
 

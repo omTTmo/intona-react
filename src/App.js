@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // eslint-disable-next-line
 import logo from './logo.svg';
 import './App.css';
-import Menu from './menu';
+import Menu from './menu/menu';
 
 // import {fadeOutMenu, fadeInMenu, isPlay, isTune} from './utility';
 

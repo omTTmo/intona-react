@@ -1,0 +1,78 @@
+// eslint-disable-next-line
+import React, { Component } from 'react';
+import {  createCanvas, createSettings } from '../ui';
+import { SettingsButton } from '../settings';
+
+class Menu extends Component {
+
+	constructor(props) {
+    	super(props);
+    	this.state = {
+    		active: " ",
+    		open: false,
+    		baseClass: " gugi animated "
+    	};
+
+    	this.handleClick = this.handleClick.bind(this);
+    	this.fadeOutMenu = this.fadeOutMenu.bind(this);
+    	this.handleSettings = this.handleSettings.bind(this);
+  	}
+
+  	componentDidMount() {
+  		this.setState({active: "rotateInUpRight"});
+  		this.refs.menu.classList.add("flipInY");
+  	}
+
+  	fadeOutMenu(){
+  		this.setState({active: "flipOutY"});
+  		this.refs.menu.classList.add("flipOutX");
+	}
+
+	handleClick(event) {
+		event.preventDefault();
+		this.fadeOutMenu();
+		setTimeout(function(){
+			createCanvas();
+		},1200);
+	}
+
+	handleSettings(event) {
+		event.preventDefault();
+		this.setState({open: true});
+		this.fadeOutMenu();
+		setTimeout(function(){
+			createSettings();
+		},1200);
+	}
+
+	render() {
+		const open = this.state.open;
+		const settingBtn = open ? (
+			<SettingsButton className={this.state.active + this.state.baseClass + "open true"} handleSettings={this.handleSettings}/>
+			):(
+			<SettingsButton className={this.state.active + this.state.baseClass + "closed false"} handleSettings={this.handleSettings}/>
+			);
+		const options = ["tune", "practice"];
+		const buttons = options.map(butt => {
+			return(
+		        <div key={butt} className="welcomeButton" onClick={this.handleClick}>
+		        	<button id={butt} className={this.state.active + " " + butt + " gugi animated"}>{butt}</button>
+		        </div>
+				)
+		})
+
+		return (
+		        <div id="menu" ref="menu" className="animated">
+		          	<div id="welcome" className="window" style={{display:'initial'}}>
+		              	<div id="welcomeHeader">
+		                	INTONA
+		              	</div>
+		              	{buttons}
+		              	{settingBtn}
+		          	</div>
+		        </div>
+			)
+	}
+}
+
+export default Menu;
