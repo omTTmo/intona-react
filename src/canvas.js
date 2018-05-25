@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import VerticalMenu from './menu/vertMenu';
-import { noteFromPitch, getOctNumber, getWav, playSound } from './audio-rel/tools';
+import { noteFromPitch, getOctNumber, centOffset, getWav, playSound } from './audio-rel/tools';
 import audioContext from './audio-rel/audiocontext';
-import { resizeCanvas } from './ui';
 const Pitchfinder = require('pitchfinder');
 
 //Maybe better to wrap these globals in the new CONTEXT API?
@@ -22,11 +21,11 @@ var analyzer = null;
 
 
 // “reusable rect component”
-function rect(props) {
-    const {ctx, x, y, width, height} = props;
-    ctx.fillStyle = 'pink';
-    ctx.fillRect(x, y, width, height);
-}
+// function rect(props) {
+//     const {ctx, x, y, width, height} = props;
+//     ctx.fillStyle = 'pink';
+//     ctx.fillRect(x, y, width, height);
+// }
 
 class CanvasComp extends Component {
 
@@ -40,10 +39,15 @@ class CanvasComp extends Component {
           isPlaying: 0,
           isPaused: 0,
           context: null,
-          keys: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+          keys: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"],
+          settings: {
+            octaveNumber: 1,
+            freq: 1
+          }
         }
         this.xRatio = 0;
         this.yRatio = 0;
+
     }
 
     componentWillMount(){
@@ -125,23 +129,38 @@ class CanvasComp extends Component {
         const w = this.state.width;
         const h2 = this.state.halfH;
         var notes = noteFromPitch( roundedCurrPitch );
+        const offTune = centOffset(roundedCurrPitch,notes);
+
 
         ctx.clearRect(0,0,w,this.state.height);
+        //Display nothing when key is undefined
+        const fontSize = w;
+        ctx.font =  fontSize/6 + "px Lato";
 
+        this.state.keys[notes%12] ===  undefined ? ctx.fillText("",0,0) : ctx.fillText( this.state.keys[notes%12], w/2*.8, h2*(.5));
 
-        ctx.font = "120px Lato";
-        ctx.fillText( this.state.keys[notes%12] + getOctNumber(roundedCurrPitch), w/2*.67, h2*(.5));
+        /*  Settings - Octave no.   */
+        //  Depending on settings render octave number and frequency
+        //  Frequency can only be detected down to 80 Hz!
+        this.state.settings.octaveNumber && roundedCurrPitch > 80 ? ctx.fillText( getOctNumber(roundedCurrPitch), w*.8,h2*.5 ) : ctx.fillText("",0,0);
 
-        //Display Frequencies?
+        /*  Settings - Freq     */
+        //  Display Frequencies
         ctx.font = "36px Gugi";
         ctx.fillStyle = "white";
-            // this.state.settings.freq?
-        roundedCurrPitch < 0 ? ctx.fillText("", w, this.state.height)
-        :
-        ctx.fillText(roundedCurrPitch, w * .7, this.state.height*.9);
-        ctx.strokeStyle = "white";
+        this.state.settings.freq && roundedCurrPitch < 0  ? ctx.fillText("", w, this.state.height) : ctx.fillText(roundedCurrPitch, w * .7, this.state.height*.9);
 
+        /*  Settings - Cents     */
+        //  Display offset in cents
+        // this.state.settings.cents
+
+        /*Draw Shapes*/
+        this.drawLines(ctx,w,h2);
+    }
+
+    drawLines(ctx, w , h2) {
         //Draw those lines
+        ctx.strokeStyle = "white";
         ctx.beginPath();
         ctx.moveTo(w*.25, h2);
         ctx.lineTo(w*.42, h2);
@@ -162,8 +181,9 @@ class CanvasComp extends Component {
         console.log('resized')
         // let tempXRatio = this.state.width;
         // let tempYRatio = this.state.height;
-        let mobileOrResizeX = this.state.width;
-        let mobileOrResizeY = this.state.height;
+
+        // let mobileOrResizeX = this.state.width;
+        // let mobileOrResizeY = this.state.height;
 
         window.innerWidth <= 1024 ?
             this.setState({ width: window.innerWidth*.9, height: window.innerHeight*.65 }):this.setState({ width: window.innerWidth/2, height: window.innerHeight*.65 })

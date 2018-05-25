@@ -12,7 +12,7 @@ export function octFromFreq(freq)
 export function getOctNumber(freq) {
   var lnote = octFromFreq(freq);
   var oct = Math.floor(lnote);
-  var offset = 50.0;
+  // var offset = 50.0;
   var cents = 1200 * (lnote - oct);
   if (cents >= 1150) {
     cents -= 1200;
@@ -20,7 +20,6 @@ export function getOctNumber(freq) {
   }
   return oct;
 }
-//end sengpiel
 
 export function noteFromPitch( frequency ) {
   var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) );
