@@ -8,7 +8,7 @@ class Menu extends Component {
 	constructor(props) {
     	super(props);
     	this.state = {
-    		active: " ",
+    		active: "no",
     		open: false,
     		baseClass: " gugi animated "
     	};

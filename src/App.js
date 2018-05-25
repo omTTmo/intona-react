@@ -3,16 +3,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Menu from './menu/menu';
-
+import './animate.css';
+import CanvasComp from './canvas';
 // import {fadeOutMenu, fadeInMenu, isPlay, isTune} from './utility';
-
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioContext = new AudioContext();
 
 class App extends Component {
   render() {
     return (
-      <Menu />
+      // <Menu />
+      <CanvasComp />
     );
   }
 }

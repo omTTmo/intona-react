@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import BackButton  from './backButton';
-import { fadeOutVMenu } from '../ui'
+import MenuButton  from './menubutton';
+import { fadeOutVMenu, createSettings } from '../ui'
+
 class VerticalMenu extends Component {
 	constructor(props){
 		super(props);
@@ -9,36 +11,40 @@ class VerticalMenu extends Component {
 		this.goBack = this.goBack.bind(this);
 	}
 
-	handleClick(event) {
-		event.preventDefault();
+	handleClick(e) {
+		e.preventDefault();
 		this.setState({ active: true });
+		e.target
 	}
 
-	goBack(event) {
-		event.preventDefault();
+	goBack(e) {
+		e.preventDefault();
 		this.setState({ clicked: true});
 		fadeOutVMenu();
 	}
 
+	handleSettings(event) {
+		event.preventDefault();
+
+		fadeOutVMenu();
+		setTimeout(function(){
+			createSettings();
+		},400);
+	}
+
 	render() {
-		const items = ['Choose Instrument','More Options','volume'];
+
 		const names = "vmenu-item box-shadow";
-
-		const listItems = items.map((item, index) => {
-			return(
-				<li onClick={this.handleClick} key={index + 1} className={names}>{item}</li>
-			)
-		});
-
-		var className = this.state.active ? 'choose' :'fadeInLeft';
+		const baseClass = " back animated ";
+		var className = this.state.active ? ' choose ' :' fadeInLeft ';
 
 		return(
 			<div id="vmenu" className={className + ' back animated'}>
 				<ul className="vmenu-wrap">
 					<li key="0" className={names}>
-						<BackButton goBack={this.goBack} name=" vertMenu" />
+						<BackButton goBack={this.goBack} name=" vertMenu" baseclass={baseClass} classname={className} />
 					</li>
-					{listItems}
+					<MenuButton handleSettings={this.handleSettings} handleClick={this.handleClick} name=" vertMenu" baseclass={baseClass} classname={className} />
 				</ul>
 			</div>
 			)
