@@ -279,6 +279,8 @@ html {
 }
 
 body {
+  margin:0;
+  padding:0;
   width: 100%;
   height: 100%;
   letter-spacing: 1em;
@@ -291,6 +293,7 @@ body {
   align-items: center;
   background: linear-gradient(to top, #B2DBBF, 40%, #247BA0 100%);
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 button {
@@ -360,7 +363,7 @@ div {
 }
 
 #cnv {
-  float:left;
+  letter-spacing: 0.1em;
   border-radius: 0.3em;
   animation-duration:.5s;
 }
@@ -493,9 +496,10 @@ button:hover, .playbar div.button:hover {
 .setList {
   list-style-type: none;
   margin:2em 0;
-  border: 2px solid #ccc;
+  border: 2px solid #fff;
   border-radius: 3em;
   padding: 1em;
+  color: #fff;
 }
 
 #vmenu {
@@ -563,7 +567,7 @@ button:hover, .playbar div.button:hover {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: #FFE7CF;
+  background-color: #fff;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -597,6 +601,67 @@ input:checked + .slider:before {
   margin-left: 2em;
   letter-spacing: 0;
 }
+
+
+input[type=range].range {
+  -webkit-appearance: none;
+  width: 20%;
+  background:transparent;
+  margin: 5px 0;
+}
+input[type=range].range:focus {
+  outline: none;
+}
+input[type=range].range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: rgba(116, 130, 136, 0.78);
+  border-radius: 25px;
+  border: 0px solid #cccccc;
+}
+input[type=range].range::-webkit-slider-thumb {
+  box-shadow: 0.4px 0.4px 0px #cccccc, 0px 0px 0.4px #d9d9d9;
+  border: 1px solid #cccccc;
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+input[type=range].range:focus::-webkit-slider-runnable-track {
+ background: rgba(121, 135, 141, 1);
+}
+input[type=range].range::-moz-range-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: rgba(204, 204, 204, 0.78);
+  border-radius: 25px;
+  border: 0px solid #cccccc;
+}
+input[type=range].range::-moz-range-thumb {
+  box-shadow: 0.4px 0.4px 0px #cccccc, 0px 0px 0.4px #d9d9d9;
+  border: 1px solid #cccccc;
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#cent{
+  position: absolute;
+  left: calc(100vw*.27);
+  top: calc(100vh*.6);
+}
+
+
+
 
 /*------------------------------
           Mobile styles

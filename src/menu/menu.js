@@ -10,7 +10,9 @@ class Menu extends Component {
     	this.state = {
     		active: "no",
     		open: false,
-    		baseClass: " gugi animated "
+    		baseClass: " gugi animated ",
+    		tune: "tune",
+    		play: "play"
     	};
 
     	this.handleClick = this.handleClick.bind(this);
@@ -30,9 +32,10 @@ class Menu extends Component {
 
 	handleClick(event) {
 		event.preventDefault();
+		const id = event.target.id;
 		this.fadeOutMenu();
 		setTimeout(function(){
-			createCanvas();
+			createCanvas(id);
 		},1200);
 	}
 
@@ -52,10 +55,10 @@ class Menu extends Component {
 			):(
 			<SettingsButton className={this.state.active + this.state.baseClass + "closed false"} handleSettings={this.handleSettings}/>
 			);
-		const options = ["tune", "practice"];
+		const options = ["tune", "play"];
 		const buttons = options.map(butt => {
 			return(
-		        <div key={butt} className="welcomeButton" onClick={this.handleClick}>
+		        <div key={butt} className={butt +' welcomeButton'} onClick={this.handleClick}>
 		        	<button id={butt} className={this.state.active + " " + butt + " gugi animated"}>{butt}</button>
 		        </div>
 				)

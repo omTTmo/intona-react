@@ -21,17 +21,17 @@ export function getOctNumber(freq) {
   return oct;
 }
 
-export function noteFromPitch( frequency ) {
-  var noteNum = 12 * (Math.log( frequency / 440 )/Math.log(2) );
+export function noteFromPitch( frequency, baseFreq ) {
+  var noteNum = 12 * (Math.log( frequency / baseFreq )/Math.log(2) );
   return Math.round( noteNum ) + 69;
 }
 
-export function frequencyFromNoteNumber( note ) {
-  return 440 * Math.pow(2,(note-69)/12);
+export function frequencyFromNoteNumber( note, baseFreq ) {
+  return baseFreq * Math.pow(2,(note-69)/12);
 }
 
-export function centOffset( frequency, note ) {
-  return Math.floor( 1200 * Math.log( frequency / frequencyFromNoteNumber( note )) / Math.LN2 );
+export function centOffset( frequency, note, baseFreq ) {
+  return Math.floor( 1200 * Math.log( frequency / frequencyFromNoteNumber( note, baseFreq )) / Math.LN2 );
 }
 
 // export function getWav(name, dict) {

@@ -14,7 +14,7 @@ class VerticalMenu extends Component {
 	handleClick(e) {
 		e.preventDefault();
 		this.setState({ active: true });
-		e.target
+
 	}
 
 	goBack(e) {
