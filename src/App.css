@@ -335,32 +335,6 @@ div {
   margin-top:0.5em;
 }
 
-#note {
-  flex-grow:6;
-  border-right: 2px solid white;
-  min-width:200px;
-}
-
-#tune {
-  flex-grow:1;
-  min-width:100px;
-}
-
-#freq {
-  position: absolute;
-  margin-left: 6em;
-}
-
-.hz {
-  position: absolute;
-  font-size: 3em;
-  color: white;
-  right: 40%;
-}
-
-#freq .inner {
-  float:left;
-}
 
 #cnv {
   letter-spacing: 0.1em;
@@ -654,13 +628,13 @@ input[type=range].range::-moz-range-thumb {
   cursor: pointer;
 }
 
-#cent{
-  position: absolute;
-  left: calc(100vw*.27);
-  top: calc(100vh*.6);
+
+
+.recButton {
+  width: 3em;
+  height: 3em;
+  background: red;
 }
-
-
 
 
 /*------------------------------

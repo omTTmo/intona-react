@@ -1,5 +1,16 @@
-window.AudioContext = window.AudioContext || window.webkitAudioContext
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 
-const ac = new window.AudioContext();
+const AudioContext  = {
 
-export default ac;
+  getAudioContext() {
+    return audioCtx;
+  },
+
+  getAnalyser() {
+    return analyser;
+  }
+
+}
+
+export default AudioContext;

@@ -13,23 +13,35 @@ export function createCanvas(id) {
 	ReactDOM.render(<CanvasPlay />, document.getElementById('root'));
 }
 
-export function removeCanvas() {
+export function removeCanvas(id) {
 	ReactDOM.render(<Menu  />, document.getElementById('root'));
 }
 
-export function fadeOutVMenu() {
+export function fadeOutVMenu(id) {
 	var cnv = document.getElementById('cnv');
 	cnv.classList.remove('zoomIn');
 	cnv.classList.add('animated','zoomOut');
 	setTimeout(function(){
-		removeCanvas();
+		removeCanvas(id);
 	},400);
 }
 
 export function	createSettings() {
 	ReactDOM.render(<Settings />, document.getElementById('root'));
 }
+export function isIntersect(point, object,obOffset,halfWindowSize) {
+	const xMin = object.x;
+	const xMax = object.x + halfWindowSize*obOffset;
+	const yMin = object.y;
+	const yMax = object.y + halfWindowSize*obOffset;
 
+	const mouseX = point.x;
+	const mouseY = point.y;
+
+	if (mouseX>=xMin && mouseX<=xMax && mouseY>=yMin && mouseY<=yMax){
+		return true;
+	}
+}
 export function getGaugeSkin(label) {
 	return {
 		meter: {
