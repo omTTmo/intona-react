@@ -451,11 +451,6 @@ button:hover, .playbar div.button:hover {
   margin: 2em;
 }
 
-.cnv2 {
-  width:100%;
-  height:auto;
-}
-
 .bottom {
   margin-top:15%;
 }
@@ -695,6 +690,5 @@ input[type=range].range::-moz-range-thumb {
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-
 
 }

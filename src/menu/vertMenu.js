@@ -8,7 +8,6 @@ class VerticalMenu extends Component {
 		super(props);
 		this.state = {
 			active: false
-
 		};
 		// this.handleClick = this.handleClick.bind(this);
 		this.goBack = this.goBack.bind(this);
@@ -17,7 +16,6 @@ class VerticalMenu extends Component {
 	handleClickPlay(e) {
 		e.preventDefault();
 		createCanvas('play')
-
 	}
 
 	handleClickTune(e) {

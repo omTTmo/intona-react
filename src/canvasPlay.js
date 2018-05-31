@@ -57,11 +57,6 @@
 				minConf: 0.75,
 				haveAnalysis:0,
 				keys: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"],
-				score: {
-					"hit": 0,
-					"sum":0,
-					"percent":0
-				}
 	        }
 	        //Video stuff
 	        this.svg = new Image();
@@ -92,6 +87,11 @@
 	        this.timer = 0;
 	        this.pitchIndex = 0;
 	        this.aimPitch = 0;
+	        this.score = {
+					"hit": 0,
+					"sum":0,
+					"percent":0
+				}
 	        //thisthisthis functions
 	        this.getNewPitch = this.getNewPitch.bind(this);
 	        this.haveRecord = this.haveRecord.bind(this);
@@ -191,31 +191,38 @@
 			playBut.width=cnvWidth*.15;
 
 			ctx.clearRect(0,0,w,this.state.height);
-			this.state.haveAnalysis ? ctx.fillText(this.msg,cnvWidth*.1,h*.21) : ctx.fillText("",0,0);
-			this.state.isRecordClicked ? ctx.fillText(los,cnvWidth/2,h2) : ctx.fillText("",0,0);
+			if (this.state.haveAnalysis) {
+				// ctx.fillText("Your input was: ",cnvWidth*.35,h*.15);
+				ctx.fillText(this.msg,cnvWidth*.3,h*.15)
+
+			}
+			// this.state.haveAnalysis ? ctx.fillText(this.msg,cnvWidth*.35,h*.15) : ctx.fillText("",0,0);
+			this.state.isRecordClicked ? ctx.fillText(los,cnvWidth/2,h2+100) : ctx.fillText("",0,0);
 			ctx.shadowColor = 'black'
 			ctx.shadowOffsetX = '3';
 			ctx.shadowOffsetY = '3';
 			ctx.shadowBlur ='4';
 	  		ctx.drawImage(svg, cnvWidth/2-svg.width/2, h2*.7-svg.height/2, cnvWidth*.15, cnvWidth*.15);
-	  		ctx.drawImage(playBut, cnvWidth*.25, h2+playBut.height/3, cnvWidth*.15, cnvWidth*.15);
-	  		ctx.drawImage(next, cnvWidth*.6, h2+svg.height/3,cnvWidth*.15,cnvWidth*.15);
+	  		ctx.drawImage(next, cnvWidth*.25, h2+playBut.height/3, cnvWidth*.15, cnvWidth*.15);
+	  		ctx.drawImage(playBut, cnvWidth*.6, h2+svg.height/3,cnvWidth*.15,cnvWidth*.15);
 
 
-			ctx.font = w/40+"px Lato";
+			ctx.font = w/42+"px Lato";
 			ctx.shadowColor = 'transparent'
 	  		ctx.fillStyle = "white"
 	  		ctx.fillText("Click for", cnvWidth*.25, h2*1.75);
 	  		ctx.fillText("reference C", cnvWidth*.25, h2*1.85);
 	  		ctx.fillText("Click to get", cnvWidth*.6, h2*1.75);
 	  		ctx.fillText("new pitch", cnvWidth*.6, h2*1.85);
-	  		ctx.fillText("<- Click record and sing:", cnvWidth*.65, h2*.7);
-	  		ctx.font = w/20+"px Lato";
-	  		ctx.fillText(this.aimPitch,cnvWidth*.8,h2*.88);
+	  		ctx.fillText("<- Click record and sing/play:", cnvWidth*.6, h2*.7);
+	  		ctx.font = w/15+"px Lato";
+	  		ctx.beginPath();
+	  		ctx.fillText(this.aimPitch,cnvWidth*.8,h2);
+	  		ctx.fillStyle = "white"
 	  		ctx.font = w/30+"px Lato";
-			ctx.fillText("Your input was G",cnvWidth*.35,h*.15);
-			ctx.fillText(this.state.score.sum, cnvWidth*.1,h*.15)
-			ctx.fillText("1234", cnvWidth*.1,h*.2)
+			// ctx.fillText("Your input was: ",cnvWidth*.35,h*.15);
+			ctx.fillText(this.score.sum, cnvWidth*.1,h*.2)
+			ctx.fillText("Score", cnvWidth*.1,h*.15)
 	  		//ctx.fillText("note:"+next.width,100,400);
 	  		//Keep values updated
 	  		this.canvasObjPos.record.x = cnvWidth/2-svg.width/2;
@@ -250,7 +257,7 @@
 	    			}else{
 	    				los = timer
 	    			}
-	    			console.log("los in "+timer+"...");
+	    			console.log("Go in "+timer+"...");
 	    		}
 	    	},1000);
 	    }
@@ -297,18 +304,20 @@
 
 	    		if (pitch === this.aimPitch) {
 	    			if (Math.abs(centDiffe) <= 15) {
-	    				msg += ", right on spot!";
-	    				this.state.score.hit += 5;
+	    				msg += ", very accurate!";
+	    				this.score.hit += 5;
 	    			}else if(centDiffe < -15) {
-	    				msg += ", a bit high";
-	    				this.state.score.hit += 2;
+	    				msg += ", but "+(Math.abs(centDiffe))+" too high";
+	    				this.score.hit += 2;
 	    			}else {
-	    				msg += ", a bit too low";
-	    				this.state.score.hit += 2;
+	    				msg += ", but "+centDiffe+" too low";
+	    				this.score.hit += 2;
 	    			}
-	  			  	this.state.score.sum += 1;
 	    		}else{
-	    			msg = "TRY AGAIN MOTHERFUCKER"
+	    			setTimeout(() => {
+	    				this.getNewPitch();
+	    			},1000)
+	    			msg = "	Whoops, I heard: " + pitch;
 	    		}
 	    	}
 	    	this.msg = msg;
@@ -349,10 +358,16 @@
 	    }
 
 	    resizeCanvas() {
-	        console.log('resized')
-	        //Why did I write this? :()
-	        window.innerWidth <= 1024 ?
-	            this.setState({ width: window.innerWidth*.9, height: window.innerHeight*.65 }):this.setState({ width: window.innerWidth/2, height: window.innerHeight*.65 })
+	        console.log('resized');
+	        if(window.innerWidth <= 1440) {
+	        	this.setState({ width: window.innerWidth*.9, height: window.innerHeight*.9 })
+	    	}else if(window.innerWidth <= 1024){
+	    		this.setState({ width: window.innerWidth*.1, height: window.innerHeight*.6 })
+	    	}else if(window.innerWidth <= 1000) {
+	    		this.setState({ width: window.innerWidth, height: window.innerHeight*.3 })
+	    	}else{
+	    		this.setState({ width: window.innerWidth/2, height: window.innerHeight*.65 })
+	    	}
 	    }
 
 	    handleClick(e) {

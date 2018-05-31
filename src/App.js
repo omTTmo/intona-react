@@ -5,13 +5,12 @@ import './App.css';
 import Menu from './menu/menu';
 import './animate.css';
 import CanvasPlay from './canvasPlay';
-// import {fadeOutMenu, fadeInMenu, isPlay, isTune} from './utility';
+
 
 class App extends Component {
   render() {
     return (
-      // <Menu />
-      <CanvasPlay />
+      <Menu />
     );
   }
 }
