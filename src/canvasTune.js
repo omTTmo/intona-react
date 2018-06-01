@@ -43,8 +43,8 @@ class CanvasTune extends Component {
             // octaveNumber: localStorage.getItem('showOctaveNr'),
             freq: 1,
             // freq: localStorage.getItem('showFreq'),
-            baseFreq: 440
-            // baseFreq: localStorage.getItem('setSaved') ? localStorage.getItem('baseFreq') : 440
+            // baseFreq: 440
+            baseFreq: localStorage.getItem('setSaved') ? localStorage.getItem('baseFreq') : 440
             }
         }
 

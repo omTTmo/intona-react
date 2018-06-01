@@ -191,7 +191,7 @@
 			playBut.width=cnvWidth*.15;
 			ctx.clearRect(0,0,w,this.state.height);			
 			if (this.state.haveAnalysis) {
-				// ctx.fillText("Your input was: ",cnvWidth*.35,h*.15);
+				ctx.font = w /38 +"px Lato";				
 				ctx.fillText(this.msg,cnvWidth*.3,h*.15)
 
 			}			
@@ -209,14 +209,14 @@
 			ctx.font = w/42+"px Lato";			
 			ctx.shadowColor = 'transparent'
 	  		ctx.fillStyle = "white"
-	  		ctx.fillText("Click for", cnvWidth*.25, h2*1.75);
-	  		ctx.fillText("reference C", cnvWidth*.25, h2*1.85);
-	  		ctx.fillText("Click to get", cnvWidth*.6, h2*1.75);
-	  		ctx.fillText("new pitch", cnvWidth*.6, h2*1.85);
-	  		ctx.fillText("<- Click record and sing/play:", cnvWidth*.6, h2*.7);
+	  		// ctx.fillText("Click for", cnvWidth*.25, h2*1.75);
+	  		ctx.fillText("Reference C", cnvWidth*.25, h2*1.75);
+	  		// ctx.fillText("Click to get", cnvWidth*.6, h2*1.75);
+	  		ctx.fillText("Get new pitch", cnvWidth*.6, h2*1.75);
+	  		ctx.fillText("<- Click record and give me a:", cnvWidth*.6, h2*.7);
 	  		ctx.font = w/15+"px Lato";
 	  		ctx.beginPath();
-	  		ctx.fillText(this.aimPitch,cnvWidth*.8,h2);
+	  		ctx.fillText(this.aimPitch,cnvWidth*.75,h2);
 	  		ctx.fillStyle = "white"
 	  		ctx.font = w/30+"px Lato";
 			// ctx.fillText("Your input was: ",cnvWidth*.35,h*.15);
@@ -290,9 +290,9 @@
 	    getResult(res) {
 	    	var msg = 0;
 	    	if (isNaN(res.confi)) {
-	    		msg = "It seems that something is wrong with your microphone";
+	    		msg = "Something wrong with your microphone?";
 	    	}else if(res.confi <= this.state.minConf) {
-	    		msg = "Try again please, this time a bit louder!";
+	    		msg = "A bit louder please!";
 	    	}else{
 	    		var freq = res.median;
 	    		var pitch = freqToPitch(this.state.keys,freq);
@@ -363,8 +363,7 @@
 	     //    	this.setState({ width: window.innerWidth, height: window.innerHeight })	        	
 	    	// }else if(window.innerWidth <= 1024){
 	    		// this.setState({ width: window.innerWidth, height: window.innerHeight })	        	
-	    	// }
-	    	var ctx = this.getCanvas().getContext("2d");	   
+	    	// }	    		   
 	    	
 		    console.log('resized');            
 	        this.setState({ width: window.innerWidth, height: window.innerHeight })             
