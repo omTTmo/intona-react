@@ -1,6 +1,6 @@
 	import React, { Component } from 'react';
 	import ReactDOM from 'react-dom';
-	import { Canvas } from './Canvas';
+	import { Canvas } from './canvas';
 	import VerticalMenu from './menu/vertMenu';
 	import audioContext from './audio-rel/audiocontext';
 	import {
@@ -41,8 +41,8 @@
 	        this.state = {
 	        	//Video stuff
 	        	isTune: 0,
-				width:  window.innerWidth/2,
-				height: window.innerHeight*.7,
+				width:  window.innerWidth,
+				height: window.innerHeight*.9,
 				ratio: window.devicePixelRatio || 1,
 				context: null,
 				halfH: null,
@@ -189,13 +189,12 @@
 	    	//Scale svgs
 			svg.width=cnvWidth*.15;
 			playBut.width=cnvWidth*.15;
-
-			ctx.clearRect(0,0,w,this.state.height);
+			ctx.clearRect(0,0,w,this.state.height);			
 			if (this.state.haveAnalysis) {
 				// ctx.fillText("Your input was: ",cnvWidth*.35,h*.15);
 				ctx.fillText(this.msg,cnvWidth*.3,h*.15)
 
-			}
+			}			
 			// this.state.haveAnalysis ? ctx.fillText(this.msg,cnvWidth*.35,h*.15) : ctx.fillText("",0,0);
 			this.state.isRecordClicked ? ctx.fillText(los,cnvWidth/2,h2+100) : ctx.fillText("",0,0);
 			ctx.shadowColor = 'black'
@@ -207,7 +206,7 @@
 	  		ctx.drawImage(playBut, cnvWidth*.6, h2+svg.height/3,cnvWidth*.15,cnvWidth*.15);
 
 
-			ctx.font = w/42+"px Lato";
+			ctx.font = w/42+"px Lato";			
 			ctx.shadowColor = 'transparent'
 	  		ctx.fillStyle = "white"
 	  		ctx.fillText("Click for", cnvWidth*.25, h2*1.75);
@@ -358,16 +357,29 @@
 	    }
 
 	    resizeCanvas() {
-	        console.log('resized');
-	        if(window.innerWidth <= 1440) {
-	        	this.setState({ width: window.innerWidth*.9, height: window.innerHeight*.9 })
-	    	}else if(window.innerWidth <= 1024){
-	    		this.setState({ width: window.innerWidth*.1, height: window.innerHeight*.6 })
-	    	}else if(window.innerWidth <= 1000) {
-	    		this.setState({ width: window.innerWidth, height: window.innerHeight*.3 })
-	    	}else{
-	    		this.setState({ width: window.innerWidth/2, height: window.innerHeight*.65 })
-	    	}
+	     //    console.log('resized');	        
+	     //    var ratio = this.state.width/this.state.height;
+	     //    if(window.innerWidth <= 1440) {
+	     //    	this.setState({ width: window.innerWidth, height: window.innerHeight })	        	
+	    	// }else if(window.innerWidth <= 1024){
+	    		// this.setState({ width: window.innerWidth, height: window.innerHeight })	        	
+	    	// }
+	    	var ctx = this.getCanvas().getContext("2d");	   
+	    	
+		    console.log('resized');            
+	        this.setState({ width: window.innerWidth, height: window.innerHeight })             
+	        var wtoh = 4/3;
+	        var ratio = this.state.width/wtoh;
+	        var neww = this.state.width;
+	        var newh = this.state.height;
+	        var newratio = neww/newh;
+	        if (newratio > wtoh) {
+	            this.setState({ width: newh * wtoh, height: newh});
+
+	        }else{
+	            this.setState({width:neww,height:newh / wtoh});	    		
+	        }
+
 	    }
 
 	    handleClick(e) {
@@ -377,7 +389,7 @@
 				y:e.clientY - this.getCanvas().offsetTop
 			}
 
-			//	isIntersect(point, object,obOffset,halfWindowSize)
+			// Check if user hit a button on canvas 
 			if (isIntersect(mousePos,this.canvasObjPos.record,.15,this.state.width)) {
 				this.startRecord();
 				this.setState({isRecordClicked: 1});

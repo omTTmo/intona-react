@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import VerticalMenu from './menu/vertMenu';
 import { noteFromPitch, getOctNumber, centOffset, frequencyFromNoteNumber } from './audio-rel/tools';
 import audioContext from './audio-rel/audiocontext';
-import { Canvas } from './Canvas';
+import { Canvas } from './canvas';
 import { getGaugeSkin } from './ui';
 
 const Pitchfinder = require('pitchfinder');
@@ -31,8 +31,8 @@ class CanvasTune extends Component {
 
         this.state = {
             isTune: 1,
-            width:  window.innerWidth/2,
-            height: window.innerHeight*.7,
+            width:  window.innerWidth,
+            height: window.innerHeight*.9,
             halfH: null,
             isPlaying: 0,
             isPaused: 0,
@@ -41,7 +41,8 @@ class CanvasTune extends Component {
             settings: {
             octaveNumber: 1,
             // octaveNumber: localStorage.getItem('showOctaveNr'),
-            freq: localStorage.getItem('showFreq'),
+            freq: 1,
+            // freq: localStorage.getItem('showFreq'),
             baseFreq: 440
             // baseFreq: localStorage.getItem('setSaved') ? localStorage.getItem('baseFreq') : 440
             }
@@ -152,7 +153,7 @@ class CanvasTune extends Component {
 
     draw(ctx, roundedCurrPitch) {
         const w = this.state.width;
-        const h2 = this.state.halfH;
+        const h2 = this.state.height/2;
         var baseFreq = this.state.settings.baseFreq;
 
         var notes = noteFromPitch( roundedCurrPitch, baseFreq);
@@ -214,11 +215,23 @@ class CanvasTune extends Component {
     }
 
     resizeCanvas() {
-        console.log('resized')
-
-        //Why did I write this? :()
-        window.innerWidth <= 1024 ?
-            this.setState({ width: window.innerWidth*.9, height: window.innerHeight*.65 }):this.setState({ width: window.innerWidth/2, height: window.innerHeight*.65 })
+        console.log('resized');            
+        this.setState({ width: window.innerWidth, height: window.innerHeight })             
+        var wtoh = 4/3;
+        var ratio = this.state.width/wtoh;
+        var neww = this.state.width;
+        var newh = this.state.height;
+        var newratio = neww/newh;
+        if (newratio > wtoh) {
+            this.setState({ width: newh *wtoh, height: newh});
+        }else{
+            this.setState({width:neww,height:newh/wtoh});
+        }
+            // if(window.innerWidth <= 1440) {
+            //     this.setState({ width: window.innerWidth, height: window.innerHeight })             
+            // }else if(window.innerWidth <= 1024){
+            //     this.setState({ width: window.innerWidth, height: ratio})             
+            // }
     }
 
 
